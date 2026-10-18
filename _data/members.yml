@@ -9,7 +9,6 @@
 #   bio         두세 문장 소개
 #   photo       (선택) 프로필 사진 경로. 예: /assets/img/team/seika.jpg — 없으면 이니셜로 표시
 #   github / blog / email  (선택) 비워 두면 표시하지 않음
-#   portfolio   (선택) 대표 글 목록. group 으로 묶여 보인다
 #
 # 새 팀원은 아래 형식으로 이어서 적는다.
 #
@@ -49,44 +48,3 @@
   github: WTCYJ
   blog: https://wtcyj.github.io/
   email: ""
-  portfolio:
-    - group: 안드로이드
-      title: Android Security Mastery 시리즈
-      note: 연구용 에뮬레이터부터 IPC, 네이티브 분석까지 단계별 실습
-      url: https://wtcyj.github.io/posts/android-security-mastery-series-index/
-    - group: 안드로이드
-      title: HexTree Android Track 정리
-      note: 인텐트, 프로바이더, Frida로 앱 공격 표면 분석
-      url: https://wtcyj.github.io/posts/hextree-android-track/
-    - group: 안드로이드
-      title: Android CVE 재현 1 — Janus(CVE-2017-13156)
-      note: 24주 스터디에서 진행한 CVE 10건 재현 시리즈의 첫 편
-      url: https://wtcyj.github.io/posts/android-cve-01-janus/
-    - group: 안드로이드
-      title: DEF CON 2019 Vitor, 6겹 매트료시카 벗기기
-      note: Java에서 DEX, 네이티브, 셸코드, ROP, JS로 이어지는 리버싱
-      url: https://wtcyj.github.io/posts/defcon-2019-vitor-android-matryoshka/
-    - group: 안드로이드
-      title: OWASP MASTG Hacking Playground
-      note: 취약 앱 24개 케이스를 에뮬레이터에서 직접 풀이
-      url: https://wtcyj.github.io/posts/mastg-hacking-playground-writeup/
-    - group: 커널·시스템
-      title: Copy Fail (CVE-2026-31431)
-      note: 리눅스 커널 권한 상승 버그의 원인 분석과 직접 재현
-      url: https://wtcyj.github.io/posts/copy-fail-cve-2026-31431-writeup/
-    - group: 커널·시스템
-      title: Android Kernel Security 04 — syzkaller
-      note: 직접 만든 KCOV 퍼저에서 syzkaller로 커널 퍼징 확장
-      url: https://wtcyj.github.io/posts/android-kernel-security-syzkaller/
-    - group: 취약점 제보
-      title: wasm2c abort가 error가 되기까지
-      note: 직접 제보한 wasm2c 버그가 78일 만에 수정된 과정
-      url: https://wtcyj.github.io/posts/wasm2c-contradictory-imports/
-    - group: 취약점 제보
-      title: MasterStudy LMS SQL Injection
-      note: 워드프레스 LMS 플러그인 SQL 인젝션 발견과 CVE 제출
-      url: https://wtcyj.github.io/posts/masterstudy-sqli/
-    - group: 포렌식
-      title: DFC 2026 분석 기록
-      note: 디지털 포렌식 챌린지 2026 학생팀 7등, 문제 10개 풀이
-      url: https://wtcyj.github.io/posts/dfc-2026-writeup-index/

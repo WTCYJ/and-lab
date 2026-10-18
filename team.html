@@ -6,7 +6,7 @@ permalink: /team/
 ---
 <ul class="team-grid">
   {%- for m in site.data.members -%}
-  <li class="team-card{% if m.portfolio.size > 0 %} has-portfolio{% endif %}" id="{{ m.key }}">
+  <li class="team-card" id="{{ m.key }}">
     <div class="team-profile">
       <header class="team-head">
         {% include avatar.html m=m class="avatar-lg" %}
@@ -50,22 +50,6 @@ permalink: /team/
       {%- endif -%}
     </div>
 
-    {% if m.portfolio.size > 0 %}
-    <div class="portfolio">
-      <p class="portfolio-title mono">Portfolio</p>
-      {% assign groups = m.portfolio | group_by: "group" %}
-      {% for g in groups %}
-      <section class="portfolio-group">
-        <h3 class="mono">{{ g.name }}</h3>
-        <ul>
-          {% for p in g.items %}
-          <li><a href="{{ p.url }}"><span class="pf-title">{{ p.title }}</span>{% if p.note %}<span class="pf-note">{{ p.note }}</span>{% endif %}</a></li>
-          {% endfor %}
-        </ul>
-      </section>
-      {% endfor %}
-    </div>
-    {% endif %}
   </li>
   {%- endfor -%}
 </ul>

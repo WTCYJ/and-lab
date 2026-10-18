@@ -357,16 +357,14 @@ code, pre, kbd { font-variant-ligatures: none; }
 .member a:hover .member-name, .author-card a:hover .author-name { color: var(--accent); }
 img.avatar { object-fit: cover; padding: 0; }
 
-.team-grid { list-style: none; display: grid; gap: 20px; padding-bottom: 96px; }
+.team-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 20px; padding-bottom: 96px; }
 .team-card {
-  display: grid; gap: 40px;
   padding: 32px; scroll-margin-top: 88px;
   border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--bg-2);
 }
-.team-card.has-portfolio { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
 .team-card:target { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
-.team-profile { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 96px; align-self: start; }
+.team-profile { display: flex; flex-direction: column; gap: 20px; }
 .team-head { display: flex; align-items: center; gap: 16px; }
 .team-head h2 { font-size: 1.4rem; }
 .team-head .dim { font-size: .84rem; margin-top: 2px; }
@@ -392,23 +390,6 @@ img.avatar { object-fit: cover; padding: 0; }
 .team-links a { color: var(--ink-3); }
 .team-links a:hover { color: var(--accent); }
 
-.portfolio { border-left: 1px solid var(--line); padding-left: 40px; }
-.portfolio-title { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
-.portfolio-group + .portfolio-group { margin-top: 22px; }
-.portfolio-group h3 { font-size: .76rem; font-weight: 600; color: var(--ink-3); letter-spacing: .04em; margin-bottom: 6px; }
-.portfolio-group ul { list-style: none; }
-.portfolio-group a { display: grid; gap: 2px; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; transition: background .15s; }
-.portfolio-group a:hover { background: var(--bg-3); }
-.pf-title { font-weight: 500; line-height: 1.5; }
-.pf-title::after { content: " ↗"; font-family: var(--mono); font-size: .8em; color: var(--ink-3); }
-.portfolio-group a:hover .pf-title { color: var(--accent); }
-.pf-note { font-size: .86rem; color: var(--ink-3); line-height: 1.6; }
-
-@media (max-width: 900px) {
-  .team-card.has-portfolio { grid-template-columns: 1fr; gap: 28px; }
-  .team-profile { position: static; }
-  .portfolio { border-left: 0; padding-left: 0; border-top: 1px dashed var(--line); padding-top: 24px; }
-}
 @media (max-width: 600px) { .team-card { padding: 22px; } }
 @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
 
