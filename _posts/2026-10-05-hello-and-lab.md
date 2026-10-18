@@ -2,7 +2,7 @@
 title: AND-LAB 기술 블로그를 시작합니다
 description: 안드로이드 보안 연구실 AND-LAB이 연구 기록을 공개하는 이유와, 이 블로그에 어떤 글이 올라올지 정리했습니다.
 category: lab
-author: wtcy
+author: seika
 tags: [공지, AND-LAB]
 date: 2026-10-05 10:00:00 +0900
 ---

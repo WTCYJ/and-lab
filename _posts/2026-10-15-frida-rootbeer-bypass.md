@@ -2,7 +2,7 @@
 title: Frida로 RootBeer 루팅 탐지 우회하기
 description: 루팅 탐지 라이브러리 RootBeer가 무엇을 검사하는지 읽어 보고, Frida 스크립트 한 장으로 판단 결과를 바꿔 봅니다.
 category: reversing
-author: wtcy
+author: seika
 tags: [Frida, RootBeer, 루팅 탐지]
 date: 2026-10-15 10:00:00 +0900
 ---

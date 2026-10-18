@@ -6,39 +6,52 @@ permalink: /team/
 ---
 <ul class="team-grid">
   {%- for m in site.data.members -%}
-  {%- assign posts = site.posts | where: "author", m.key -%}
-  <li class="team-card" id="{{ m.key }}">
-    <header class="team-head">
-      {% include avatar.html m=m class="avatar-lg" %}
-      <div>
-        <h2>{{ m.name }}</h2>
-        <p class="mono dim">@{{ m.handle }}</p>
-      </div>
-      <span class="role{% if m.lead %} role-lead{% endif %}">{{ m.role }}</span>
-    </header>
+  <li class="team-card{% if m.portfolio.size > 0 %} has-portfolio{% endif %}" id="{{ m.key }}">
+    <div class="team-profile">
+      <header class="team-head">
+        {% include avatar.html m=m class="avatar-lg" %}
+        <div>
+          <h2>{{ m.name }}</h2>
+          <p class="mono dim">@{{ m.handle }}</p>
+        </div>
+        <span class="role{% if m.lead %} role-lead{% endif %}">{{ m.role }}</span>
+      </header>
 
-    {% if m.bio %}<p class="team-bio">{{ m.bio }}</p>{% endif %}
+      {% if m.affiliations.size > 0 %}
+      <ul class="team-affil">{% for a in m.affiliations %}<li>{{ a }}</li>{% endfor %}</ul>
+      {% endif %}
 
-    {% if m.areas.size > 0 %}
-    <ul class="chips">{% for a in m.areas %}<li>{{ site.topics[a].name | default: a }}</li>{% endfor %}</ul>
-    {% endif %}
+      {% if m.bio %}<p class="team-bio">{{ m.bio }}</p>{% endif %}
 
-    {% if posts.size > 0 %}
-    <div class="team-posts">
-      <p class="mono dim">쓴 글 {{ posts.size }}편</p>
-      <ul>
-        {% for p in posts limit: 3 %}<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>{% endfor %}
-      </ul>
+      {% if m.areas.size > 0 %}
+      <ul class="chips">{% for a in m.areas %}<li>{{ site.topics[a].name | default: a }}</li>{% endfor %}</ul>
+      {% endif %}
+
+      {%- if m.github != "" or m.blog != "" or m.email != "" -%}
+      <p class="team-links mono">
+        {% if m.github != "" %}<a href="https://github.com/{{ m.github }}">GitHub ↗</a>{% endif %}
+        {% if m.blog != "" %}<a href="{{ m.blog }}">Blog ↗</a>{% endif %}
+        {% if m.email != "" %}<a href="mailto:{{ m.email }}">Mail</a>{% endif %}
+      </p>
+      {%- endif -%}
+    </div>
+
+    {% if m.portfolio.size > 0 %}
+    <div class="portfolio">
+      <p class="portfolio-title mono">Portfolio</p>
+      {% assign groups = m.portfolio | group_by: "group" %}
+      {% for g in groups %}
+      <section class="portfolio-group">
+        <h3 class="mono">{{ g.name }}</h3>
+        <ul>
+          {% for p in g.items %}
+          <li><a href="{{ p.url }}"><span class="pf-title">{{ p.title }}</span>{% if p.note %}<span class="pf-note">{{ p.note }}</span>{% endif %}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
     </div>
     {% endif %}
-
-    {%- if m.github != "" or m.blog != "" or m.email != "" -%}
-    <p class="team-links mono">
-      {% if m.github != "" %}<a href="https://github.com/{{ m.github }}">GitHub</a>{% endif %}
-      {% if m.blog != "" %}<a href="{{ m.blog }}">Blog</a>{% endif %}
-      {% if m.email != "" %}<a href="mailto:{{ m.email }}">Mail</a>{% endif %}
-    </p>
-    {%- endif -%}
   </li>
   {%- endfor -%}
 </ul>

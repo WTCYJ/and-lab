@@ -2,7 +2,7 @@
 title: exported 액티비티 하나로 로그인 건너뛰기
 description: AndroidManifest의 exported 속성이 왜 앱 해킹의 첫 번째 확인 항목인지, 실습 앱으로 직접 열어 보며 정리했습니다.
 category: app
-author: wtcy
+author: seika
 tags: [Intent, AndroidManifest, adb]
 date: 2026-10-10 10:00:00 +0900
 ---

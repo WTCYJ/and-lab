@@ -20,7 +20,7 @@ http://localhost:4000 에서 확인한다.
 title: 글 제목
 description: 목록과 검색 결과에 보이는 한두 문장 요약
 category: app        # app | reversing | platform | fuzzing | kernel | hardware | lab
-author: wtcy         # _data/members.yml 의 key
+author: seika        # _data/members.yml 의 key
 tags: [Frida, Intent]
 date: 2026-10-15 10:00:00 +0900
 ---
