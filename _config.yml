@@ -10,6 +10,12 @@ url: "https://wtcyj.github.io"
 baseurl: ""
 
 github: WTCYJ        # GitHub 조직/계정 이름
+
+# Google Search Console 소유권 확인. HTML 태그 방식으로 받은
+# <meta name="google-site-verification" content="여기 값"> 의 content 값만 넣고 푸시한다.
+# 비워 두면 태그가 생기지 않는다.
+webmaster_verifications:
+  google:
 email: ""           # 연락용 메일
 
 nav:

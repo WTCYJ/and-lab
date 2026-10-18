@@ -42,6 +42,16 @@ date: 2026-10-15 10:00:00 +0900
 | 팀원 소개 페이지(이름, 역할, 분야, 소개, 사진, 링크) | `_data/members.yml` |
 | 색·글꼴·레이아웃 | `assets/css/main.css` 맨 위 토큰 |
 
+## 검색 노출 (Google)
+
+1. [Google Search Console](https://search.google.com/search-console)에서 속성 추가 → URL 접두어에 `https://wtcyj.github.io/and-lab/` 입력.
+2. 소유권 확인 방법 중 HTML 태그를 골라 `content="..."` 안의 값만 복사한다. 확인 버튼은 아직 누르지 않는다.
+3. `_config.yml` 의 `webmaster_verifications.google` 에 그 값을 넣고 푸시한다.
+4. Actions 배포가 끝나면 Search Console 에서 확인을 누른다.
+5. Sitemaps 메뉴에 `sitemap.xml` 을 제출한다(`https://wtcyj.github.io/and-lab/sitemap.xml` 은 jekyll-sitemap 이 자동으로 만든다).
+   처음에 "가져올 수 없음"으로 보여도 반나절쯤 지나면 성공으로 바뀌는 경우가 많다.
+6. 바로 검색에 띄우고 싶은 글은 URL 검사에 주소를 넣고 색인 생성 요청을 누른다. 반영까지 며칠 걸린다.
+
 ## 배포
 
 1. GitHub에 저장소를 만들고 `main` 브랜치를 푸시한다.
