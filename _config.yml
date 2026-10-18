@@ -7,10 +7,10 @@ lang: ko
 
 # 배포 주소. GitHub Actions(.github/workflows/pages.yml)가 baseurl 을 자동으로 넣어 주므로
 # 여기서는 url 만 맞추면 된다.
-url: ""
+url: "https://wtcyj.github.io"
 baseurl: ""
 
-github: ""          # 예: and-lab (GitHub 조직/계정 이름)
+github: WTCYJ        # GitHub 조직/계정 이름
 email: ""           # 연락용 메일
 
 nav:
