@@ -1,0 +1,26 @@
+---
+title: 프로젝트
+eyebrow: Projects
+lead: 지금 붙잡고 있는 것, 끝낸 것, 다음에 할 것.
+permalink: /projects/
+---
+{%- assign labels = "active:진행 중,planned:계획,done:완료" | split: "," -%}
+{%- for l in labels -%}
+  {%- assign kv = l | split: ":" -%}
+  {%- assign items = site.data.projects | where: "status", kv[0] -%}
+  {%- if items.size > 0 -%}
+<section class="project-group">
+  <h2 class="group-title"><span class="status status-{{ kv[0] }}"></span>{{ kv[1] }} <span class="mono dim">{{ items.size }}</span></h2>
+  <ul class="project-grid">
+    {%- for p in items -%}
+    <li class="project-card">
+      <p class="mono dim">{{ site.topics[p.area].name }}</p>
+      <h3>{% if p.link != "" %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+      <p>{{ p.summary }}</p>
+      <ul class="chips">{% for s in p.stack %}<li>{{ s }}</li>{% endfor %}</ul>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+  {%- endif -%}
+{%- endfor -%}

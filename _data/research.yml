@@ -1,0 +1,31 @@
+# 홈 화면 "연구 분야" 카드. category 는 _config.yml 의 topics 키와 맞춘다.
+- key: app
+  num: "01"
+  title: 앱 해킹
+  desc: exported 컴포넌트, 딥링크, WebView 브릿지처럼 앱이 밖으로 열어 둔 입구를 찾아 들어갑니다.
+  tags: [Intent, WebView, Deep Link]
+- key: reversing
+  num: "02"
+  title: 리버싱·동적 분석
+  desc: smali와 네이티브 라이브러리를 읽고, Frida로 실행 중인 앱의 판단을 바꿔 봅니다.
+  tags: [jadx, Frida, IDA]
+- key: platform
+  num: "03"
+  title: 플랫폼·Binder
+  desc: 앱과 system_server 사이의 Binder 호출을 따라가며 권한 검사가 빠진 곳을 찾습니다.
+  tags: [Binder, AIDL, system_server]
+- key: fuzzing
+  num: "04"
+  title: 네이티브·퍼징
+  desc: 파서와 코덱 같은 네이티브 코드에 변이 입력을 넣어 크래시를 만들고 원인을 좁힙니다.
+  tags: [AFL++, libFuzzer, ASan]
+- key: kernel
+  num: "05"
+  title: 안드로이드 커널
+  desc: 드라이버와 커널 인터페이스를 분석하고 syzkaller로 퍼징하며 권한 상승 경로를 연구합니다.
+  tags: [syzkaller, KASAN, LPE]
+- key: hardware
+  num: "06"
+  title: 무선·하드웨어
+  desc: BLE, NFC, UART처럼 폰 바깥으로 이어진 통로와 SoC 펌웨어를 들여다봅니다.
+  tags: [BLE, NFC, UART]

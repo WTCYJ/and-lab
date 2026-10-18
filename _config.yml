@@ -1,0 +1,57 @@
+title: AND-LAB
+tagline: 안드로이드 보안 연구실
+description: >-
+  AND-LAB은 안드로이드 앱부터 커널, 하드웨어까지 직접 뜯어보고 공격해 보는 보안 연구실입니다.
+  연구 기록과 실습 노트를 이 블로그에 남깁니다.
+lang: ko
+
+# 배포 주소. GitHub Actions(.github/workflows/pages.yml)가 baseurl 을 자동으로 넣어 주므로
+# 여기서는 url 만 맞추면 된다.
+url: ""
+baseurl: ""
+
+github: ""          # 예: and-lab (GitHub 조직/계정 이름)
+email: ""           # 연락용 메일
+
+nav:
+  - { title: 연구, url: /#research }
+  - { title: 블로그, url: /blog/ }
+  - { title: 프로젝트, url: /projects/ }
+  - { title: 소개, url: /about/ }
+
+# 글 분류. 키는 front matter 의 category 값, name 은 화면에 보이는 이름.
+topics:
+  app:      { name: 앱 해킹 }
+  reversing: { name: 리버싱 }
+  platform: { name: 플랫폼·Binder }
+  fuzzing:  { name: 퍼징 }
+  kernel:   { name: 커널 }
+  hardware: { name: 무선·하드웨어 }
+  lab:      { name: 연구실 소식 }
+
+permalink: /posts/:slug/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block: { line_numbers: false }
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "" }
+    values: { layout: page }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .claude
+  - serve.cmd

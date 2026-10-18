@@ -1,0 +1,78 @@
+---
+layout: default
+body_class: home
+---
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="prompt mono"><span class="ps">root@and-lab:~#</span> whoami<span class="caret"></span></p>
+      <h1>잠금을 풀고<br><em>안드로이드</em> 안으로.</h1>
+      <p class="lead">{{ site.description }}</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="{{ '/blog/' | relative_url }}">기술 블로그 읽기</a>
+        <a class="btn" href="#research">연구 분야 보기</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="phone">
+        <span class="punch"></span>
+        {% include mark.html id="hero" class="mark-hero" %}
+        <p class="lock-state mono"><span class="locked">LOCKED</span><span class="unlocked">UNLOCKED</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Research</p>
+      <h2>연구 분야</h2>
+      <p>앱 한 겹 아래부터 커널과 칩까지, 여섯 갈래로 나눠 파고듭니다.</p>
+    </header>
+    <ol class="research-grid">
+      {%- for r in site.data.research -%}
+      {%- assign n = site.posts | where: "category", r.key | size -%}
+      <li class="research-card">
+        <a href="{{ '/blog/' | relative_url }}?c={{ r.key }}">
+          <span class="no mono">{{ r.num }}</span>
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.desc }}</p>
+          <ul class="chips">{% for t in r.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+          <span class="more mono">{% if n > 0 %}글 {{ n }}편 →{% else %}글 준비 중{% endif %}</span>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two-col">
+    <div>
+      <header class="section-head">
+        <p class="eyebrow">Blog</p>
+        <h2>최근 글</h2>
+      </header>
+      <ul class="post-list">
+        {% for post in site.posts limit: 5 %}{% include post-item.html post=post %}{% endfor %}
+      </ul>
+      <a class="text-link mono" href="{{ '/blog/' | relative_url }}">글 전체 보기 →</a>
+    </div>
+
+    <div>
+      <header class="section-head">
+        <p class="eyebrow">Projects</p>
+        <h2>진행 중인 프로젝트</h2>
+      </header>
+      <ul class="term-list">
+        {% assign active = site.data.projects | where: "status", "active" %}
+        {% for p in active %}
+        <li><span class="mono gt">&gt;</span> <span>{{ p.title }}</span> <span class="mono dim">{{ site.topics[p.area].name }}</span></li>
+        {% endfor %}
+      </ul>
+      <a class="text-link mono" href="{{ '/projects/' | relative_url }}">프로젝트 전체 보기 →</a>
+    </div>
+  </div>
+</section>

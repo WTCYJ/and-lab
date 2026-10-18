@@ -1,0 +1,11 @@
+{%- assign p = include.post -%}
+<li class="post-item" data-cat="{{ p.category }}">
+  <a href="{{ p.url | relative_url }}">
+    <p class="post-item-meta mono">
+      <span class="cat">{{ site.topics[p.category].name | default: p.category }}</span>
+      <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%Y.%m.%d" }}</time>
+    </p>
+    <h3>{{ p.title }}</h3>
+    {% if p.description %}<p class="post-item-desc">{{ p.description }}</p>{% endif %}
+  </a>
+</li>

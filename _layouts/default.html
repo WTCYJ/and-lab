@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+{% include head.html %}
+</head>
+<body class="{{ page.body_class }}">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="AND-LAB 홈">
+      {% include mark.html id="hdr" class="mark-sm" %}
+      <span class="wordmark">AND<span>-LAB</span></span>
+    </a>
+    <nav class="nav" aria-label="주 메뉴">
+      {%- for item in site.nav -%}
+        {%- assign top = item.url | split: '#' | first -%}
+        <a href="{{ item.url | relative_url }}"{% if top != '/' and page.url contains top %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endfor -%}
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="라이트/다크 테마 전환">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-sun" d="M12 4V2M12 22v-2M4 12H2m20 0h-2M5.6 5.6 4.2 4.2m15.6 15.6-1.4-1.4M5.6 18.4l-1.4 1.4M19.8 4.2l-1.4 1.4M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path class="i-moon" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+{{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      {% include mark.html id="ftr" class="mark-sm" %}
+      <div>
+        <strong class="wordmark">AND<span>-LAB</span></strong>
+        <p>{{ site.tagline }}</p>
+      </div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+      {% if site.github != "" %}<li><a href="https://github.com/{{ site.github }}">GitHub</a></li>{% endif %}
+      {% if site.email != "" %}<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% endif %}
+    </ul>
+    <p class="footer-copy mono">root@and-lab:~# echo "© {{ site.time | date: '%Y' }} AND-LAB"</p>
+  </div>
+</footer>
+</body>
+</html>

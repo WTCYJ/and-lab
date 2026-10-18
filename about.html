@@ -1,0 +1,34 @@
+---
+title: 연구실 소개
+eyebrow: About
+lead: AND-LAB은 안드로이드 보안을 함께 공부하고 연구하는 모임입니다.
+permalink: /about/
+---
+<div class="about">
+  <section class="prose">
+    <h2>무엇을 하나요</h2>
+    <p>안드로이드는 앱, 프레임워크, 네이티브 라이브러리, 커널, 그리고 칩 펌웨어가 층층이 쌓인 시스템입니다. 우리는 이 층을 하나씩 열어 보며 어디서 신뢰가 깨지는지 찾습니다. 의도적 취약 앱으로 기본기를 다지고, 실제 앱과 오픈소스 컴포넌트에서 버그를 찾아 제보하는 데까지 가는 것이 목표입니다.</p>
+    <h2>원칙</h2>
+    <ul>
+      <li>직접 재현한 것만 씁니다. 추측은 추측이라고 적습니다.</li>
+      <li>허가받은 대상과 자기 기기, 의도적 취약 앱에서만 실습합니다.</li>
+      <li>찾은 취약점은 공개 전에 제조사나 운영자에게 먼저 알립니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="group-title">구성원</h2>
+    <ul class="member-grid">
+      {%- for m in site.data.members -%}
+      <li class="member">
+        <div class="avatar mono">{{ m.handle | slice: 0, 2 | upcase }}</div>
+        <div>
+          <p class="member-name">{{ m.name }} <span class="mono dim">@{{ m.handle }}</span></p>
+          <p class="member-role">{{ m.role }} · {{ m.focus }}</p>
+          {% if m.github != "" %}<a class="mono text-link" href="https://github.com/{{ m.github }}">github/{{ m.github }}</a>{% endif %}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+</div>

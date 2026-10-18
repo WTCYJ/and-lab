@@ -1,0 +1,11 @@
+---
+title: 페이지를 찾을 수 없어요
+permalink: /404.html
+layout: default
+---
+<div class="wrap notfound">
+  {% include mark.html id="nf" class="mark-hero" %}
+  <p class="mono">$ adb shell am start -n {{ page.url }}<br><span class="err">Error: Activity class does not exist.</span></p>
+  <h1>페이지를 찾을 수 없어요</h1>
+  <a class="btn btn-primary" href="{{ '/' | relative_url }}">홈으로</a>
+</div>

@@ -1,0 +1,38 @@
+# 프로젝트 목록. status: active | done | planned
+# 아래는 예시 항목이다. 실제 프로젝트로 바꿔 쓰면 된다.
+- title: 취약 앱 실습 시리즈
+  status: active
+  area: app
+  summary: DIVA, AndroGoat, Allsafe 같은 의도적 취약 앱을 하나씩 풀고, 원인과 수정 방법까지 정리합니다.
+  stack: [ADB, jadx, Frida]
+  link: ""
+- title: 루팅 탐지 우회 연구
+  status: active
+  area: reversing
+  summary: RootBeer 계열 탐지 로직을 분석하고 Frida, Magisk 모듈로 우회하는 방법을 비교합니다.
+  stack: [Frida, Magisk, Zygisk]
+  link: ""
+- title: Binder 서비스 권한 점검
+  status: planned
+  area: platform
+  summary: AOSP 시스템 서비스의 AIDL 메서드를 훑어 호출자 권한 검사가 빠진 경로를 찾습니다.
+  stack: [AOSP, AIDL, service call]
+  link: ""
+- title: 네이티브 파서 퍼징
+  status: active
+  area: fuzzing
+  summary: 앱에 들어 있는 오픈소스 파서를 하네스로 감싸 libFuzzer와 ASan으로 돌립니다.
+  stack: [libFuzzer, ASan, NDK]
+  link: ""
+- title: 커널 드라이버 퍼징 환경
+  status: done
+  area: kernel
+  summary: GKI 커널을 QEMU arm64로 부팅하고 syzkaller를 붙여 드라이버 퍼징 환경을 만들었습니다.
+  stack: [syzkaller, QEMU, KASAN]
+  link: ""
+- title: BLE 기기 트래픽 분석
+  status: planned
+  area: hardware
+  summary: 스마트 기기와 앱 사이의 BLE 통신을 캡처해 인증 없이 보낼 수 있는 명령이 있는지 봅니다.
+  stack: [nRF Sniffer, Wireshark]
+  link: ""

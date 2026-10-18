@@ -1,0 +1,14 @@
+# 구성원. author 키는 글 front matter 의 author 값과 맞춘다.
+# 아래는 예시 항목이다. 실제 이름과 링크로 바꿔 쓰면 된다.
+- key: wtcy
+  name: 김예준
+  handle: WTCY
+  role: 랩장
+  focus: 앱 해킹 · 커널 퍼징
+  github: WTCYJ
+- key: member
+  name: 구성원
+  handle: member
+  role: 연구원
+  focus: 리버싱 · 동적 분석
+  github: ""

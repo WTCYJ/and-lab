@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{%- assign cat_name = site.topics[page.category].name | default: page.category -%}
+{%- assign author = site.data.members | where: "key", page.author | first -%}
+{%- assign chars = content | strip_html | size -%}
+{%- assign minutes = chars | divided_by: 600 | plus: 1 -%}
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<article class="post">
+  <header class="post-head wrap">
+  <div class="post-head-inner">
+    <p class="eyebrow">
+      {% if page.category %}<a href="{{ '/blog/' | relative_url }}?c={{ page.category }}">{{ cat_name }}</a>{% endif %}
+      {% if page.series %}<span class="dot">·</span><span>{{ page.series }}</span>{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+    <p class="post-meta mono">
+      {% if author %}<span>{{ author.handle }}</span><span class="dot">·</span>{% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      <span class="dot">·</span><span>{{ minutes }}분 읽기</span>
+    </p>
+  </div>
+  </header>
+
+  <div class="post-grid wrap">
+    <div class="prose">
+      {{ content }}
+    </div>
+    <aside class="toc" aria-label="목차" hidden>
+      <p class="toc-title mono">목차</p>
+      <nav></nav>
+    </aside>
+  </div>
+
+  <footer class="post-foot wrap">
+    {% if page.tags.size > 0 %}
+    <ul class="tags">{% for t in page.tags %}<li>#{{ t }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    {% if author %}
+    <div class="author-card">
+      <div class="avatar mono">{{ author.handle | slice: 0, 2 | upcase }}</div>
+      <div>
+        <p class="author-name">{{ author.name }} <span class="mono">@{{ author.handle }}</span></p>
+        <p class="author-role">{{ author.role }} · {{ author.focus }}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    <nav class="pager" aria-label="이전·다음 글">
+      {% if page.previous %}<a class="prev" href="{{ page.previous.url | relative_url }}"><span class="mono">← 이전 글</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+      {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}"><span class="mono">다음 글 →</span>{{ page.next.title }}</a>{% endif %}
+    </nav>
+  </footer>
+</article>
