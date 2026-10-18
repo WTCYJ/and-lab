@@ -48,4 +48,4 @@ date: 2026-10-15 10:00:00 +0900
 2. 저장소 Settings → Pages → Build and deployment → Source 를 GitHub Actions 로 바꾼다.
 3. 이후 `main` 에 푸시할 때마다 `.github/workflows/pages.yml` 이 빌드·배포한다.
 
-저장소 이름이 `조직명.github.io` 면 루트 주소에, 그 밖의 이름이면 `/저장소이름/` 아래에 열린다. 경로는 워크플로가 알아서 맞춘다. 배포 뒤 `_config.yml` 의 `url` 을 실제 주소로 채우면 RSS와 공유 미리보기 링크가 맞게 나온다.
+저장소 이름이 `조직명.github.io` 면 루트 주소에, 그 밖의 이름이면 `/저장소이름/` 아래에 열린다. 경로는 워크플로가 알아서 맞춘다. 배포 뒤 `_config.yml` 의 `url` 을 실제 주소로 채우면 공유 미리보기와 사이트맵 링크가 맞게 나온다.

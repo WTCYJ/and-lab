@@ -2,7 +2,6 @@ title: AND-LAB
 tagline: 안드로이드 보안 연구실
 description: >-
   AND-LAB은 안드로이드 앱부터 커널, 하드웨어까지 직접 뜯어보고 공격해 보는 보안 연구실입니다.
-  연구 기록과 실습 노트를 이 블로그에 남깁니다.
 lang: ko
 
 # 배포 주소. GitHub Actions(.github/workflows/pages.yml)가 baseurl 을 자동으로 넣어 주므로
@@ -39,7 +38,6 @@ kramdown:
     block: { line_numbers: false }
 
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
