@@ -354,7 +354,39 @@ code, pre, kbd { font-variant-ligatures: none; }
 .member-name, .author-name { font-weight: 700; }
 .member-name .mono, .author-name .mono { font-weight: 400; font-size: .82rem; color: var(--ink-3); }
 .member-role, .author-role { color: var(--ink-2); font-size: .9rem; }
-.member .text-link { margin-top: 4px; font-size: .8rem; }
+.member a:hover .member-name, .author-card a:hover .author-name { color: var(--accent); }
+img.avatar { object-fit: cover; padding: 0; }
+
+.team-grid { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding-bottom: 96px; }
+.team-card {
+  display: flex; flex-direction: column; gap: 18px;
+  padding: 28px; scroll-margin-top: 88px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg-2);
+  transition: border-color .2s;
+}
+.team-card:target { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.team-head { display: flex; align-items: center; gap: 16px; }
+.team-head h2 { font-size: 1.3rem; }
+.team-head .dim { font-size: .82rem; margin-top: 2px; }
+.avatar-lg { width: 64px; height: 64px; border-radius: 18px; font-size: 1.15rem; }
+.role {
+  margin-left: auto; align-self: flex-start;
+  font: 600 .74rem/1 var(--mono); padding: 7px 10px; border-radius: 999px;
+  color: var(--ink-2); border: 1px solid var(--line);
+}
+.role-lead { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+.team-bio { color: var(--ink-2); line-height: 1.8; }
+.team-posts { border-top: 1px dashed var(--line); padding-top: 16px; }
+.team-posts .dim { font-size: .76rem; margin-bottom: 8px; }
+.team-posts ul { list-style: none; display: grid; gap: 6px; }
+.team-posts a { font-size: .94rem; }
+.team-posts a::before { content: "> "; font-family: var(--mono); color: var(--accent); }
+.team-posts a:hover { color: var(--accent); }
+.team-links { display: flex; gap: 18px; margin-top: auto; font-size: .82rem; }
+.team-links a { color: var(--ink-3); }
+.team-links a:hover { color: var(--accent); }
+@media (max-width: 760px) { .team-grid { grid-template-columns: 1fr; } .team-card { padding: 22px; } }
 @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
 
 /* ---------- 글 ---------- */

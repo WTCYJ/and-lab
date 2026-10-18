@@ -1,0 +1,6 @@
+{%- assign m = include.m -%}
+{%- if m.photo and m.photo != "" -%}
+<img class="avatar {{ include.class }}" src="{{ m.photo | relative_url }}" alt="" loading="lazy">
+{%- else -%}
+<div class="avatar mono {{ include.class }}" aria-hidden="true">{{ m.handle | slice: 0, 2 | upcase }}</div>
+{%- endif -%}

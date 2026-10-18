@@ -39,7 +39,7 @@ date: 2026-10-15 10:00:00 +0900
 | 사이트 이름, 설명, GitHub·메일, 메뉴, 분야 이름 | `_config.yml` |
 | 홈의 연구 분야 카드 | `_data/research.yml` |
 | 프로젝트 목록 | `_data/projects.yml` |
-| 구성원 | `_data/members.yml` |
+| 팀원 소개 페이지(이름, 역할, 분야, 소개, 사진, 링크) | `_data/members.yml` |
 | 색·글꼴·레이아웃 | `assets/css/main.css` 맨 위 토큰 |
 
 ## 배포

@@ -41,11 +41,11 @@ layout: default
 
     {% if author %}
     <div class="author-card">
-      <div class="avatar mono">{{ author.handle | slice: 0, 2 | upcase }}</div>
-      <div>
+      {% include avatar.html m=author %}
+      <a href="{{ '/team/' | relative_url }}#{{ author.key }}">
         <p class="author-name">{{ author.name }} <span class="mono">@{{ author.handle }}</span></p>
-        <p class="author-role">{{ author.role }} · {{ author.focus }}</p>
-      </div>
+        <p class="author-role">{{ author.role }}{% for a in author.areas %} · {{ site.topics[a].name }}{% endfor %}</p>
+      </a>
     </div>
     {% endif %}
 

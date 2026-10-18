@@ -17,18 +17,18 @@ permalink: /about/
   </section>
 
   <section>
-    <h2 class="group-title">구성원</h2>
+    <h2 class="group-title">팀원</h2>
     <ul class="member-grid">
       {%- for m in site.data.members -%}
       <li class="member">
-        <div class="avatar mono">{{ m.handle | slice: 0, 2 | upcase }}</div>
-        <div>
+        {% include avatar.html m=m %}
+        <a href="{{ '/team/' | relative_url }}#{{ m.key }}">
           <p class="member-name">{{ m.name }} <span class="mono dim">@{{ m.handle }}</span></p>
-          <p class="member-role">{{ m.role }} · {{ m.focus }}</p>
-          {% if m.github != "" %}<a class="mono text-link" href="https://github.com/{{ m.github }}">github/{{ m.github }}</a>{% endif %}
-        </div>
+          <p class="member-role">{{ m.role }}</p>
+        </a>
       </li>
       {%- endfor -%}
     </ul>
+    <a class="text-link mono" href="{{ '/team/' | relative_url }}">팀원 소개 전체 보기 →</a>
   </section>
 </div>

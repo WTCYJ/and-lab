@@ -17,6 +17,7 @@ nav:
   - { title: 연구, url: /#research }
   - { title: 블로그, url: /blog/ }
   - { title: 프로젝트, url: /projects/ }
+  - { title: 팀원, url: /team/ }
   - { title: 소개, url: /about/ }
 
 # 글 분류. 키는 front matter 의 category 값, name 은 화면에 보이는 이름.

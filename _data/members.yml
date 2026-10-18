@@ -1,14 +1,30 @@
-# 구성원. author 키는 글 front matter 의 author 값과 맞춘다.
-# 아래는 예시 항목이다. 실제 이름과 링크로 바꿔 쓰면 된다.
+# 팀원. key 는 글 front matter 의 author 값과 맞춘다. 적힌 순서대로 팀원 페이지에 나온다.
+#
+#   name    이름
+#   handle  활동명(아바타 이니셜과 @표시에 쓰인다)
+#   role    역할. lead: true 면 초록 배지로 강조
+#   areas   연구 분야. _config.yml 의 topics 키(app, reversing, platform, fuzzing, kernel, hardware)
+#   bio     두세 문장 소개
+#   photo   (선택) 프로필 사진 경로. 예: /assets/img/team/wtcy.jpg — 없으면 이니셜로 표시
+#   github / blog / email  (선택) 비워 두면 표시하지 않음
+#
+# 두 번째 항목은 예시다. 실제 팀원으로 바꾸거나 복사해서 늘리면 된다.
 - key: wtcy
   name: 김예준
   handle: WTCY
   role: 랩장
-  focus: 앱 해킹 · 커널 퍼징
+  lead: true
+  areas: [app, kernel, fuzzing]
+  bio: 앱의 열린 입구를 찾는 일과 커널 드라이버 퍼징을 주로 합니다. 연구실 실습 환경과 블로그를 관리합니다.
   github: WTCYJ
+  blog: ""
+  email: ""
 - key: member
   name: 구성원
   handle: member
   role: 연구원
-  focus: 리버싱 · 동적 분석
+  areas: [reversing, platform]
+  bio: jadx와 Frida로 앱 내부 동작을 따라가고, Binder 서비스의 권한 검사를 살펴봅니다.
   github: ""
+  blog: ""
+  email: ""

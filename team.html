@@ -1,0 +1,44 @@
+---
+title: 팀원 소개
+eyebrow: Team
+lead: AND-LAB에서 함께 안드로이드를 뜯어보는 사람들입니다.
+permalink: /team/
+---
+<ul class="team-grid">
+  {%- for m in site.data.members -%}
+  {%- assign posts = site.posts | where: "author", m.key -%}
+  <li class="team-card" id="{{ m.key }}">
+    <header class="team-head">
+      {% include avatar.html m=m class="avatar-lg" %}
+      <div>
+        <h2>{{ m.name }}</h2>
+        <p class="mono dim">@{{ m.handle }}</p>
+      </div>
+      <span class="role{% if m.lead %} role-lead{% endif %}">{{ m.role }}</span>
+    </header>
+
+    {% if m.bio %}<p class="team-bio">{{ m.bio }}</p>{% endif %}
+
+    {% if m.areas.size > 0 %}
+    <ul class="chips">{% for a in m.areas %}<li>{{ site.topics[a].name | default: a }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    {% if posts.size > 0 %}
+    <div class="team-posts">
+      <p class="mono dim">쓴 글 {{ posts.size }}편</p>
+      <ul>
+        {% for p in posts limit: 3 %}<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {%- if m.github != "" or m.blog != "" or m.email != "" -%}
+    <p class="team-links mono">
+      {% if m.github != "" %}<a href="https://github.com/{{ m.github }}">GitHub</a>{% endif %}
+      {% if m.blog != "" %}<a href="{{ m.blog }}">Blog</a>{% endif %}
+      {% if m.email != "" %}<a href="mailto:{{ m.email }}">Mail</a>{% endif %}
+    </p>
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+</ul>
