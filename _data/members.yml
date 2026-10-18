@@ -4,6 +4,7 @@
 #   handle      활동명(아바타 이니셜과 @표시에 쓰인다)
 #   role        역할. lead: true 면 초록 배지로 강조
 #   affiliations 소속·활동 목록
+#   career      (선택) 경력. status 에 현 / 전 을 적으면 앞에 붙는다
 #   areas       연구 분야. _config.yml 의 topics 키(app, reversing, platform, fuzzing, kernel, hardware)
 #   bio         두세 문장 소개
 #   photo       (선택) 프로필 사진 경로. 예: /assets/img/team/seika.jpg — 없으면 이니셜로 표시
@@ -32,6 +33,17 @@
     - 가천대학교 스마트보안학과
     - 화이트햇스쿨 4기
     - HSPACE KNIGHTS
+  career:
+    - status: 현
+      title: 컨설턴트
+      org: 유니브 컨설팅
+    - status: 전
+      title: 메가스터디 SW 입시센터 강사
+      org: 메가스터디 SW 입시센터
+    - title: 청소년 IT 학술대회 및 대학생 IT 논문 경진대회 심사위원
+      org: 한국정보기술진흥원
+    - title: 한국 인공지능 올림피아드(KOAI) STAFF
+      org: 한국정보기술진흥원
   areas: [app, reversing, kernel, fuzzing]
   bio: 웹·모바일 취약점 분석, CTF, 버그바운티, 보안 도구 개발을 합니다. AND-LAB에서는 안드로이드 해킹 기초와 모의해킹 교육, 프로젝트 피드백을 맡고 있습니다.
   github: WTCYJ

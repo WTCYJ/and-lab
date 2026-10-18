@@ -380,6 +380,14 @@ img.avatar { object-fit: cover; padding: 0; }
 .team-affil { list-style: none; display: grid; gap: 6px; font-size: .92rem; color: var(--ink-2); }
 .team-affil li::before { content: "› "; color: var(--accent); font-family: var(--mono); }
 .team-bio { color: var(--ink-2); line-height: 1.8; }
+.team-career { border-top: 1px dashed var(--line); padding-top: 18px; }
+.team-career h3 { font-size: .76rem; font-weight: 600; color: var(--ink-3); letter-spacing: .04em; margin-bottom: 10px; }
+.team-career ul { list-style: none; display: grid; gap: 12px; }
+.team-career li { display: grid; gap: 2px; }
+.cr-title { font-weight: 500; line-height: 1.5; font-size: .95rem; }
+.cr-status { font: 600 .82em var(--mono); color: var(--ink-3); }
+.cr-status.now { color: var(--accent); }
+.cr-org { font-size: .84rem; color: var(--ink-3); }
 .team-links { display: flex; gap: 18px; font-size: .84rem; }
 .team-links a { color: var(--ink-3); }
 .team-links a:hover { color: var(--accent); }
