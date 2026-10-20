@@ -48,3 +48,15 @@
   github: WTCYJ
   blog: https://wtcyj.github.io/
   email: ""
+
+- key: miel
+  name: 유수민
+  handle: miel
+  role: 안드로이드 개발
+  affiliations:
+    - seKUrity
+  areas: []
+  bio: AND-LAB에서 안드로이드 앱 제작을 맡고 있습니다.
+  github: ""
+  blog: https://miel02.site/
+  email: ""
