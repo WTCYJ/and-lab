@@ -76,11 +76,12 @@
 - key: kokokyng
   name: 신혜경
   handle: kokokyng
-  role: 연구원
+  role: 안드로이드 앱 해킹 및 커널 연구원
   affiliations:
     - 서울여자대학교 정보보호학과
     - 화이트햇스쿨 4기
-  areas: []
+  areas: [app, kernel]
+  bio: AND-LAB에서 안드로이드 앱 해킹과 커널을 연구합니다.
   github: kokokyng
   blog: https://repeat-sunshine.tistory.com/
   email: ""
