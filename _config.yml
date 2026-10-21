@@ -16,7 +16,7 @@ github: WTCYJ        # GitHub 조직/계정 이름
 # 비워 두면 태그가 생기지 않는다.
 webmaster_verifications:
   google: brWp1WPU91VCTgGF-0B0A02_BJkoARaVZS-3VuMMlS0
-email: ""           # 연락용 메일
+email: yejunkim2000@gmail.com   # 연락용 메일. Contact 폼도 이 주소로 보낸다
 
 nav:
   - { title: 연구, url: /#research }
@@ -24,6 +24,7 @@ nav:
   - { title: 프로젝트, url: /projects/ }
   - { title: 팀원, url: /team/ }
   - { title: 소개, url: /about/ }
+  - { title: Contact, url: /contact/ }
 
 # 글 분류. 키는 front matter 의 category 값, name 은 화면에 보이는 이름.
 topics:

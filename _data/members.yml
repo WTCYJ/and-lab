@@ -60,3 +60,15 @@
   github: ""
   blog: https://miel02.site/
   email: ""
+
+- key: muff1n
+  name: 이하영
+  handle: Muff1n
+  role: 안드로이드 앱 해킹 및 커널 연구원
+  affiliations:
+    - seKUrity
+  areas: [app, kernel]
+  bio: AND-LAB에서 안드로이드 앱 해킹과 커널을 연구합니다.
+  github: ""
+  blog: https://chzong-hot0.tistory.com/
+  email: ""

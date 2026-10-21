@@ -1,0 +1,60 @@
+---
+title: Contact Us
+eyebrow: Contact
+lead: 협업, 프로젝트 제안, 스터디나 강연 문의까지 편하게 보내 주세요.
+permalink: /contact/
+---
+<div class="contact">
+  <section class="contact-info">
+    <h2 class="group-title">이런 연락을 기다려요</h2>
+    <ul class="contact-topics">
+      <li><span class="mono gt">&gt;</span> 공동 연구나 프로젝트 협업 제안</li>
+      <li><span class="mono gt">&gt;</span> 안드로이드 보안 스터디·랩 참여 문의</li>
+      <li><span class="mono gt">&gt;</span> 강연, 세미나, 멘토링 요청</li>
+      <li><span class="mono gt">&gt;</span> 블로그 글에 대한 질문과 정정</li>
+    </ul>
+
+    <div class="contact-direct">
+      <p class="mono dim">메일로 바로 보내기</p>
+      <a class="contact-mail mono" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      {% if site.github != "" %}<a class="text-link mono" href="https://github.com/{{ site.github }}">GitHub ↗</a>{% endif %}
+    </div>
+  </section>
+
+  <form class="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST">
+    <input type="hidden" name="_subject" value="[AND-LAB] 사이트 문의">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="field-row">
+      <label class="field">
+        <span>이름</span>
+        <input type="text" name="name" required maxlength="60" autocomplete="name">
+      </label>
+      <label class="field">
+        <span>답장 받을 이메일</span>
+        <input type="email" name="email" required maxlength="120" autocomplete="email">
+      </label>
+    </div>
+
+    <label class="field">
+      <span>분류</span>
+      <select name="분류">
+        <option>협업·프로젝트 제안</option>
+        <option>스터디·랩 참여</option>
+        <option>강연·멘토링</option>
+        <option>글 관련 질문</option>
+        <option>기타</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>내용</span>
+      <textarea name="message" rows="7" required maxlength="5000"></textarea>
+    </label>
+
+    <button class="btn btn-primary" type="submit">보내기</button>
+    <p class="form-note">보낸 내용은 FormSubmit을 거쳐 AND-LAB 메일로 전달됩니다. 답장에만 쓰고 다른 곳에 쓰지 않아요.</p>
+  </form>
+</div>

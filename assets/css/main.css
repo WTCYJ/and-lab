@@ -381,12 +381,12 @@ img.avatar { object-fit: cover; padding: 0; }
 }
 .team-card:target { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .team-profile { display: flex; flex-direction: column; gap: 20px; }
-.team-head { display: flex; align-items: center; gap: 16px; }
+.team-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
 .team-head h2 { font-size: 1.4rem; }
 .team-head .dim { font-size: .84rem; margin-top: 2px; }
 .avatar-lg { width: 72px; height: 72px; border-radius: 20px; font-size: 1.2rem; }
 .role {
-  margin-left: auto; align-self: flex-start;
+  margin-left: auto; align-self: flex-start; white-space: nowrap;
   font: 600 .74rem/1 var(--mono); padding: 7px 10px; border-radius: 999px;
   color: var(--ink-2); border: 1px solid var(--line);
 }
@@ -406,7 +406,7 @@ img.avatar { object-fit: cover; padding: 0; }
 .team-links a { color: var(--ink-3); }
 .team-links a:hover { color: var(--accent); }
 
-@media (max-width: 600px) { .team-card { padding: 22px; } }
+@media (max-width: 600px) { .team-card { padding: 22px; } .role { margin-left: 0; } }
 @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
 
 /* ---------- 글 ---------- */
@@ -559,4 +559,34 @@ img.avatar { object-fit: cover; padding: 0; }
 .notfound .mark-hero { width: 140px; }
 .notfound .mono { font-size: .86rem; color: var(--ink-2); line-height: 1.8; }
 .notfound .err { color: var(--red); }
+.notfound .ok { color: var(--accent); }
+
+/* ---------- Contact ---------- */
+.contact { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: start; padding-bottom: 96px; }
+.contact-topics { list-style: none; display: grid; gap: 12px; color: var(--ink-2); margin-bottom: 36px; }
+.contact-topics .gt { color: var(--accent); margin-right: 6px; }
+.contact-direct { display: grid; gap: 8px; justify-items: start; padding-top: 24px; border-top: 1px dashed var(--line); }
+.contact-direct .dim { font-size: .76rem; }
+.contact-mail { font-size: 1.05rem; color: var(--ink); word-break: break-all; }
+.contact-mail:hover { color: var(--accent); }
+.contact-direct .text-link { margin-top: 4px; }
+.contact-form {
+  display: grid; gap: 18px; padding: 32px;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-2);
+}
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: grid; gap: 8px; }
+.field > span { font: 600 .76rem/1 var(--mono); color: var(--ink-3); letter-spacing: .04em; }
+.field input, .field select, .field textarea {
+  width: 100%; font: 400 1rem/1.6 var(--sans); color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+  padding: 11px 14px; transition: border-color .15s, box-shadow .15s;
+}
+.field textarea { resize: vertical; min-height: 160px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.contact-form .btn { justify-self: start; cursor: pointer; border: 0; }
+.form-note { font-size: .82rem; color: var(--ink-3); line-height: 1.6; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 600px) { .field-row { grid-template-columns: 1fr; } .contact-form { padding: 22px; } }
 .notfound h1 { font-size: 1.8rem; }
