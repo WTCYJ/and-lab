@@ -379,6 +379,8 @@ img.avatar { object-fit: cover; padding: 0; }
   border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--bg-2);
 }
+/* 넓은 화면에서는 모든 줄을 같은 높이로 맞춰 카드 크기를 통일 */
+@media (min-width: 861px) { .team-grid { grid-auto-rows: 1fr; } }
 .team-card:target { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .team-profile { display: flex; flex-direction: column; gap: 20px; }
 .team-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
