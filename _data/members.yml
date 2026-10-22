@@ -85,3 +85,15 @@
   github: kokokyng
   blog: https://repeat-sunshine.tistory.com/
   email: ""
+
+- key: faco
+  name: 오가현
+  handle: faco
+  role: 안드로이드 앱 해킹 연구원
+  affiliations:
+    - seKUrity
+  areas: [app]
+  bio: AND-LAB에서 안드로이드 앱 해킹을 연구합니다.
+  github: ""
+  blog: https://gahyun0123.tistory.com/
+  email: ""
