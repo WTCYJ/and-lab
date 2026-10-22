@@ -29,7 +29,6 @@
   role: 소장
   lead: true
   affiliations:
-    - 가천대학교 스마트보안학과
     - 화이트햇스쿨 4기
     - HSPACE KNIGHTS
   career:
@@ -91,7 +90,7 @@
   handle: faco
   role: 안드로이드 앱 해킹 연구원
   affiliations:
-    - seKUrity
+    - 가천대학교 스마트보안학과
   areas: [app]
   bio: AND-LAB에서 안드로이드 앱 해킹을 연구합니다.
   github: ""
