@@ -1,6 +1,6 @@
 ---
 title: Scudo를 역이용해 임의 쓰기 만들기
-description: Android 11부터 기본 힙 할당기가 된 Scudo가 무엇을 지키는지 실습 앱으로 확인하고, WOOT'24 베스트 페이퍼가 Zygote 구조를 파고들어 두 가지 임의 쓰기 기법을 세운 과정을 따라갑니다.
+description: Android 11부터 기본 힙 할당기가 된 Scudo가 무엇을 지키는지 실습 앱으로 확인하고, WOOT'24 베스트 페이퍼가 Zygote 구조를 파고들어 두 가지 임의 쓰기 기법을 세운 과정을 분석합니다.
 category: platform
 author: seika
 tags: [Scudo, Heap, Zygote, Binder, Android]
