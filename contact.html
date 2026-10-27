@@ -24,8 +24,10 @@ permalink: /contact/
   <form class="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST">
     <input type="hidden" name="_subject" value="[AND-LAB] 사이트 문의">
     <input type="hidden" name="_template" value="table">
+    <!-- 캡차 끔: 보내기 → 캡차 페이지 없이 바로 전송 -->
+    <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">
-    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <!-- _honey 허니팟 제거: 브라우저 자동완성에 채워져 정상 제출이 스팸으로 버려지던 원인. 스팸은 FormSubmit 자체 필터에 맡긴다 -->
 
     <div class="field-row">
       <label class="field">
