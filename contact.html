@@ -21,13 +21,14 @@ permalink: /contact/
     </div>
   </section>
 
-  <form class="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST">
-    <input type="hidden" name="_subject" value="[AND-LAB] 사이트 문의">
-    <input type="hidden" name="_template" value="table">
-    <!-- 캡차 끔: 보내기 → 캡차 페이지 없이 바로 전송 -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">
-    <!-- _honey 허니팟 제거: 브라우저 자동완성에 채워져 정상 제출이 스팸으로 버려지던 원인. 스팸은 FormSubmit 자체 필터에 맡긴다 -->
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Web3Forms 전송(FormSubmit에서 교체 — 성공은 뜨는데 메일이 안 오는 문제 때문). access_key 는 공개용이라 노출돼도 안전 -->
+    <input type="hidden" name="access_key" value="366b263a-bc93-4234-be96-a9741d38e4b4">
+    <input type="hidden" name="subject" value="[AND-LAB] 사이트 문의">
+    <input type="hidden" name="from_name" value="AND-LAB Contact">
+    <input type="hidden" name="redirect" value="{{ '/contact/thanks/' | absolute_url }}">
+    <!-- Web3Forms 봇 체크(체크박스형 — 텍스트 자동완성에 안 걸려 정상 제출을 안 떨군다) -->
+    <input type="checkbox" name="botcheck" class="hp" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
     <div class="field-row">
       <label class="field">
@@ -57,6 +58,6 @@ permalink: /contact/
     </label>
 
     <button class="btn btn-primary" type="submit">보내기</button>
-    <p class="form-note">보낸 내용은 FormSubmit을 거쳐 AND-LAB 메일로 전달됩니다. 답장에만 쓰고 다른 곳에 쓰지 않아요.</p>
+    <p class="form-note">보낸 내용은 Web3Forms를 거쳐 AND-LAB 메일로 전달됩니다. 답장에만 쓰고 다른 곳에 쓰지 않아요.</p>
   </form>
 </div>
