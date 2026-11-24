@@ -49,17 +49,17 @@
   blog: https://wtcyj.github.io/
   email: ""
 
-- key: miel
-  name: 유수민
-  handle: miel
-  role: 안드로이드 폰 제작
+- key: miyu
+  name: 오윤경
+  handle: 0xM1yu
+  role: 안드로이드·iOS 앱 해킹 연구원
   affiliations:
-    - seKUrity
+    - 아주대학교 사이버보안학과 Whois
     - 화이트햇스쿨 4기
-  areas: []
-  bio: AND-LAB에서 안드로이드 전용 폰 제작을 맡고 있습니다.
-  github: ""
-  blog: https://miel02.site/
+  areas: [app]
+  bio: AND-LAB에서 안드로이드와 iOS 앱 해킹을 연구합니다.
+  github: 0xM1yu
+  blog: https://0xm1yu.github.io
   email: ""
 
 - key: muff1n
