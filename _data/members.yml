@@ -56,6 +56,17 @@
   affiliations:
     - 아주대학교 사이버보안학과 Whois
     - 화이트햇스쿨 4기
+  career_label: 활동
+  career:
+    - title: 아주대학교 정보보안학술소학회 Whois 제12대 회장
+    - title: HyperSonic CTF 2026 1st
+      org: Team Whois
+    - title: HITCON CTF 2026 4th
+      org: Team Korea Hacking Club Alliance
+    - title: 2026 ACDC 본선 진출
+      org: Team 사보카르텔
+    - title: 2026 오픈소스개발대회 본선 진출
+      org: Team 0xshield
   areas: [app]
   bio: AND-LAB에서 안드로이드와 iOS 앱 해킹을 연구합니다.
   github: 0xM1yu

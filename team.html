@@ -25,7 +25,7 @@ permalink: /team/
 
       {% if m.career.size > 0 %}
       <div class="team-career">
-        <h3 class="mono">경력</h3>
+        <h3 class="mono">{{ m.career_label | default: "경력" }}</h3>
         <ul>
           {% for c in m.career %}
           <li>
